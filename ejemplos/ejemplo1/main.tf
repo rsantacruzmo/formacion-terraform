@@ -16,7 +16,9 @@ resource "docker_container" "contenedor_nginx" {
 }
 
 resource "docker_image" "imagen_nginx" {
-    name = "nginx:latest"
+    name = var.imagen_de_contenedor
 }
 
-
+output "ip_del_contenedor"{
+    value = docker_container.contenedor_nginx.network_data[0].ip_address
+}

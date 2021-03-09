@@ -1,0 +1,1 @@
+imagen_de_contenedor = "nginx:1.17.0-alpine"
